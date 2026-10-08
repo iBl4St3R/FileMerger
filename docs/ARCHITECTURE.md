@@ -13,6 +13,7 @@
 | `FileCollector` | Expands folders recursively (skips ignored dirs), dedupes against known paths. |
 | `MergeBuilder` | Builds merged text from items (single format template) + totals. |
 | `LineCounter` | Line count rules used by item rows and totals. |
+| `AddSummary` | Status text for added/skipped files. |
 | `SizeFormatter` | `NNB` / `KB` / `MB` formatting. |
 | `OutputNameBuilder` | Auto-name, custom-name normalization, sanitizing, truncation, collision suffix. |
 | `AppSettings` / `SettingsStore` | Settings model + JSON (source-generated) load/save, fails silently. |
