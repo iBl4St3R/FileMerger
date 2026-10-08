@@ -11,4 +11,4 @@
 - List reordering is live while dragging (item moves under the cursor), no separate insertion marker.
 - Empty preview shows a muted "Merged preview appears here" hint.
 - Settings are saved 500 ms after the last change and on exit.
-- `global.json` requires SDK ≥ 8.0.100 with `rollForward: latestMajor` (works with VS SDK 9/10; app still targets net8.0); `*.pubxml` un-ignored.
+- No `global.json`: VS 2022 failed to resolve the SDK with it; any SDK ≥ 8 builds the net8.0 targets. `*.pubxml` un-ignored.
