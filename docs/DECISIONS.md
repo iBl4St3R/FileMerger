@@ -12,3 +12,4 @@
 - Empty preview shows a muted "Merged preview appears here" hint.
 - Settings are saved 500 ms after the last change and on exit.
 - No `global.json`: VS 2022 failed to resolve the SDK with it; any SDK ≥ 8 builds the net8.0 targets. `*.pubxml` un-ignored.
+- Destination folder is shown as a trimmed TextBlock (click opens the folder dialog) instead of a read-only TextBox, which clipped the text.
