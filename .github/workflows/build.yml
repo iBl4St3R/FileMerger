@@ -1,0 +1,46 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      DOTNET_NOLOGO: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore FileMerger.sln -r win-x64
+
+      - name: Build
+        run: dotnet build FileMerger.sln -c Release --no-restore
+
+      - name: Test
+        run: dotnet test tests/FileMerger.Tests -c Release --no-build --verbosity normal
+
+      - name: Publish framework-dependent
+        run: dotnet publish src/FileMerger -c Release -p:PublishProfile=FrameworkDependent
+
+      - name: Publish self-contained
+        run: dotnet publish src/FileMerger -c Release -p:PublishProfile=SelfContained
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FileMerger
+          path: publish/framework-dependent/FileMerger.exe
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FileMerger-selfcontained
+          path: publish/self-contained/FileMerger-selfcontained.exe
+          if-no-files-found: error
