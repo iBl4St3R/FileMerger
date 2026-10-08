@@ -27,7 +27,17 @@ public static class FileCollector
         {
             if (string.IsNullOrWhiteSpace(raw))
                 continue;
-            var path = Path.GetFullPath(raw);
+            string path;
+            try
+            {
+                path = Path.GetFullPath(raw);
+            }
+            catch (Exception ex) when (ex is ArgumentException or NotSupportedException or IOException)
+            {
+                missing++;
+                continue;
+            }
+
             if (File.Exists(path))
                 Add(path);
             else if (Directory.Exists(path))

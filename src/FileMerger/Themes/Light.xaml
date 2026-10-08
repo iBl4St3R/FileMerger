@@ -1,0 +1,30 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="WindowBgColor">#EFF1F5</Color>
+    <Color x:Key="PanelBgColor">#E6E9EF</Color>
+    <Color x:Key="BarBgColor">#DCE0E8</Color>
+    <Color x:Key="SurfaceColor">#CCD0DA</Color>
+    <Color x:Key="SurfaceHoverColor">#BCC0CC</Color>
+    <Color x:Key="TextColor">#4C4F69</Color>
+    <Color x:Key="MutedColor">#6C6F85</Color>
+    <Color x:Key="AccentColor">#8839EF</Color>
+    <Color x:Key="InfoColor">#1E66F5</Color>
+    <Color x:Key="SaveColor">#40A02B</Color>
+    <Color x:Key="SaveHoverColor">#368A24</Color>
+    <Color x:Key="DangerColor">#D20F39</Color>
+    <Color x:Key="SelectionColor">#408839EF</Color>
+    <SolidColorBrush x:Key="WindowBgBrush" Color="{StaticResource WindowBgColor}" />
+    <SolidColorBrush x:Key="PanelBgBrush" Color="{StaticResource PanelBgColor}" />
+    <SolidColorBrush x:Key="BarBgBrush" Color="{StaticResource BarBgColor}" />
+    <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource SurfaceColor}" />
+    <SolidColorBrush x:Key="SurfaceHoverBrush" Color="{StaticResource SurfaceHoverColor}" />
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="MutedBrush" Color="{StaticResource MutedColor}" />
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="InfoBrush" Color="{StaticResource InfoColor}" />
+    <SolidColorBrush x:Key="SaveBrush" Color="{StaticResource SaveColor}" />
+    <SolidColorBrush x:Key="SaveHoverBrush" Color="{StaticResource SaveHoverColor}" />
+    <SolidColorBrush x:Key="DangerBrush" Color="{StaticResource DangerColor}" />
+    <SolidColorBrush x:Key="SelectionBrush" Color="{StaticResource SelectionColor}" />
+    <SolidColorBrush x:Key="CloseHoverBrush" Color="#E24B4A" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="{StaticResource PanelBgColor}" />
+</ResourceDictionary>
